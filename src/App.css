@@ -323,6 +323,16 @@
   padding: 2.2rem 1.4rem 3.2rem;
 }
 
+@media(max-width:576px) {
+
+  .page {
+    padding: 14px !important;
+  }
+
+  .premium-product-section:nth-child(even) {
+    background: #fcf9f400 !important;
+  }
+}
 
 .footer {
   background: linear-gradient(135deg, #204926 0%, #2f5f34 100%);

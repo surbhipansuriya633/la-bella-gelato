@@ -180,7 +180,7 @@ const ProductsPage = () => (
                                 </div>
 
                                 {/* Content */}
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 px-sm-5 px-0">
                                     <div className="premium-content">
 
                                         <span className="premium-subtitle">
