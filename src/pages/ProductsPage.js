@@ -72,49 +72,49 @@ const productCollections = [
         extra: "Add Extra Gelato Scoop - $3.00"
     },
 
-    {
-        title: "Smoothies",
-        subtitle: "Blended Fresh With Real Fruit",
-        image: "/images/products/smoothie.jpg",
-        products: [
-            {
-                name: "Island Breeze",
-                description: "Mango, Pineapple, Banana & Yogurt",
-                regular: "$8.99",
-                large: "$11.99"
-            },
-            {
-                name: "Summer Berry Splash",
-                description: "Strawberry, Banana & Yogurt",
-                regular: "$8.99",
-                large: "$11.99"
-            },
-            {
-                name: "Mango Magic",
-                description: "Mango, Banana & Yogurt",
-                regular: "$8.99",
-                large: "$11.99"
-            },
-            {
-                name: "Berry Blast",
-                description: "Mixed Berries, Strawberry, Banana & Yogurt",
-                regular: "$8.99",
-                large: "$11.99"
-            },
-            {
-                name: "Golden Lagoon",
-                description: "Mango, Pineapple, Kiwi, Passionfruit & Yogurt",
-                regular: "$8.99",
-                large: "$11.99"
-            },
-            {
-                name: "Protein Power",
-                description: "Banana, Protein, Peanut Butter & Honey",
-                regular: "$9.99",
-                large: "$12.99"
-            }
-        ]
-    }
+    // {
+    //     title: "Smoothies",
+    //     subtitle: "Blended Fresh With Real Fruit",
+    //     image: "/images/products/smoothie.jpg",
+    //     products: [
+    //         {
+    //             name: "Island Breeze",
+    //             description: "Mango, Pineapple, Banana & Yogurt",
+    //             regular: "$8.99",
+    //             large: "$11.99"
+    //         },
+    //         {
+    //             name: "Summer Berry Splash",
+    //             description: "Strawberry, Banana & Yogurt",
+    //             regular: "$8.99",
+    //             large: "$11.99"
+    //         },
+    //         {
+    //             name: "Mango Magic",
+    //             description: "Mango, Banana & Yogurt",
+    //             regular: "$8.99",
+    //             large: "$11.99"
+    //         },
+    //         {
+    //             name: "Berry Blast",
+    //             description: "Mixed Berries, Strawberry, Banana & Yogurt",
+    //             regular: "$8.99",
+    //             large: "$11.99"
+    //         },
+    //         {
+    //             name: "Golden Lagoon",
+    //             description: "Mango, Pineapple, Kiwi, Passionfruit & Yogurt",
+    //             regular: "$8.99",
+    //             large: "$11.99"
+    //         },
+    //         {
+    //             name: "Protein Power",
+    //             description: "Banana, Protein, Peanut Butter & Honey",
+    //             regular: "$9.99",
+    //             large: "$12.99"
+    //         }
+    //     ]
+    // }
 ];
 const productHighlights = [
     {
