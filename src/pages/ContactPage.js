@@ -8,7 +8,7 @@ const contactDetails = [
     },
     {
         title: 'Phone',
-        text: '022 427 8418',
+        text: '+64 022 427 8418',
     },
     {
         title: 'Address',
