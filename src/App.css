@@ -1,0 +1,1713 @@
+:root {
+  --brand-brown: #204926;
+  --brand-gold: #dba444;
+  --brand-cream: #fffaf3;
+  --brand-dark: #1f2f22;
+  --brand-muted: #4d614f;
+  --bg-warm: #f7f2e8;
+  --bg-soft: #e7f0e3;
+  --accent-rose: #7a9b6d;
+}
+
+/* * {
+  overflow-x: hidden;
+} */
+
+.navbar.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255, 250, 243, 0.9);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(32, 73, 38, 0.08);
+  padding: 0.85rem 0;
+}
+
+.custom-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.brand img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a,
+.mobile-link {
+  text-decoration: none;
+  color: var(--brand-muted);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover,
+.mobile-link:hover {
+  color: var(--brand-gold);
+  transform: translateX(2px);
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0.3rem 0.4rem;
+  color: var(--brand-brown);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.offcanvas {
+  width: 320px;
+  background: rgba(255, 250, 243, 0.98);
+  backdrop-filter: blur(24px);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(32, 73, 38, 0.12);
+  padding: 1.1rem 1.2rem;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mobile-link {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(32, 73, 38, 0.1);
+}
+
+.mobile-footer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  color: var(--brand-muted);
+  box-shadow: 0 8px 20px rgba(32, 73, 38, 0.08);
+}
+
+.mobile-footer p {
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+  color: var(--brand-brown);
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-soft) 55%, #fbf8f0 100%);
+  color: var(--brand-dark);
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.custom-navbar {
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  background: rgba(255, 250, 243, .85);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+  padding: 14px 0;
+}
+
+.navbar-nav {
+
+  gap: 28px;
+}
+
+.nav-link {
+
+  position: relative;
+
+  color: #5b4b40;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition: .35s;
+
+  padding: 8px 0 !important;
+}
+
+.nav-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #c69c3f;
+
+  transition: .4s;
+}
+
+.nav-link:hover {
+
+  color: #b9892f;
+}
+
+.nav-link:hover::after {
+
+  width: 100%;
+}
+
+.nav-link.active {
+
+  color: #b9892f;
+}
+
+.nav-link.active::after {
+
+  width: 100%;
+}
+
+.navbar-toggler {
+
+  color: #5b3415;
+}
+
+.offcanvas {
+
+  width: 320px;
+
+  background: rgba(255, 250, 243, .96);
+
+  backdrop-filter: blur(30px);
+}
+
+.offcanvas-header {
+
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+
+  padding: 25px;
+}
+
+.mobile-link {
+
+  display: block;
+
+  text-decoration: none;
+
+  color: #3f2f25;
+
+  font-weight: 600;
+
+  font-size: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+
+  transition: .3s;
+}
+
+.mobile-link:hover {
+
+  padding-left: 18px;
+
+  color: #b9892f;
+}
+
+.mobile-footer {
+
+  margin-top: 50px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+@media(max-width:991px) {
+
+  .navbar-collapse {
+
+    display: none !important;
+  }
+
+}
+
+@media(min-width:992px) {
+
+  .navbar-toggler {
+
+    display: none;
+  }
+
+}
+
+.page {
+  overflow-y: hidden;
+  padding: 2.2rem 1.4rem 3.2rem;
+}
+
+
+.footer {
+  background: linear-gradient(135deg, #204926 0%, #2f5f34 100%);
+  color: #fff7ef;
+  padding: 2.2rem 1.5rem 1.2rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin: 0 0 0.6rem;
+  color: #ffd8b9;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.footer-column p {
+  margin: 0.3rem 0;
+  color: rgba(255, 247, 239, 0.86);
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-links a {
+  color: rgba(255, 247, 239, 0.9);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffd8b9;
+}
+
+.footer-bottom {
+  /* max-width: 1200px; */
+  margin: 1.2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 247, 239, 0.18);
+  font-size: 0.92rem;
+  color: rgba(255, 247, 239, 0.75);
+}
+
+.home-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 1.2rem;
+  min-height: 74vh;
+  padding: 2rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.home-hero-content {
+  max-width: 680px;
+  align-self: center;
+}
+
+.home-hero h1 {
+  font-size: clamp(2.4rem, 4.4vw, 3.7rem);
+  margin: 0.3rem 0 0.8rem;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  line-height: 1.15;
+}
+
+.home-hero-panel {
+  align-self: end;
+  background: rgba(255, 255, 255, 0.95);
+  color: #5a3b2b;
+  border-radius: 20px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.home-hero-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.7rem 0 0.8rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.home-hero-panel li::before {
+  content: '•';
+  color: #a34f1f;
+  margin-right: 0.5rem;
+}
+
+.text-link {
+  color: #a34f1f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.home-section {
+  margin-top: 1.8rem;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 1rem;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  margin: 0.25rem 0 0.5rem;
+  color: #7a3218;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.section-heading p {
+  line-height: 1.7;
+}
+
+.intro-grid,
+.flavor-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.intro-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-card,
+.flavor-card,
+.home-cta,
+.social-card,
+.feature-band-item,
+.home-contact-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 79, 31, 0.08);
+}
+
+.intro-card {
+  padding: 1.25rem;
+}
+
+.intro-card-image {
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  color: white;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65)),
+    url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=900&q=80') center/cover;
+}
+
+.flavor-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flavor-card {
+  min-height: 260px;
+  padding: 1.2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.flavor-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.32rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.home-cta {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-cta h2 {
+  margin: 0.2rem 0 0;
+  font-size: 1.5rem;
+  color: #7a3218;
+}
+
+.home-contact-section {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-contact-section h2 {
+  margin: 0.2rem 0 0;
+  font-size: 1.4rem;
+  color: #7a3218;
+}
+
+.home-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.82rem;
+  margin-bottom: 0.2rem;
+  color: #ab876a;
+}
+
+.hero-text {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.quick-link:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, var(--brand-gold) 0%, var(--brand-brown) 100%);
+  color: white;
+  box-shadow: 0 10px 24px rgba(111, 43, 27, 0.24);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--brand-brown);
+}
+
+.highlights,
+.items-grid,
+.quick-links,
+.contact-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.highlights {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.3rem;
+}
+
+.quick-links {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.3rem;
+}
+
+.quick-link {
+  text-decoration: none;
+  background: linear-gradient(135deg, #ffffff 0%, #fff4e8 100%);
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  font-weight: 700;
+  color: #a34f1f;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 79, 31, 0.08);
+}
+
+.highlights article,
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 79, 31, 0.08);
+}
+
+.content-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.flavors-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.flavors-hero {
+  padding: 2.2rem 1.2rem;
+  border-radius: 30px;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1516559828984-fb3b99548b21?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.flavors-hero-copy {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.flavors-hero h2 {
+  color: white;
+  font-size: 2.7rem;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.flavor-intro-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.25rem 1.35rem;
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 79, 31, 0.08);
+}
+
+.flavor-grid-large {
+  display: grid;
+  gap: 1rem;
+}
+
+.flavor-card-large {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 79, 31, 0.08);
+}
+
+.flavor-card-image {
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flavor-card-content {
+  padding: 1.25rem;
+}
+
+.flavor-card-content h3 {
+  margin-top: 0;
+  color: #7a3218;
+  font-size: 1.35rem;
+}
+
+.page-header h2 {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 2.25rem;
+  color: #7a3218;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.items-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.item-card p,
+.card p {
+  line-height: 1.65;
+}
+
+.muted {
+  color: #7f5b44;
+}
+
+.contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-card {
+  min-height: 220px;
+}
+
+.products-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.products-hero {
+  padding: 2.4rem 1.4rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.82), rgba(58, 111, 60, 0.76)),
+    url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.products-hero-copy {
+  max-width: 760px;
+}
+
+.products-hero h2 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  margin: 0.3rem 0 0.7rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.products-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.products-showcase-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.products-showcase-intro h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.7rem;
+  color: var(--brand-brown);
+}
+
+.premium-product-section {
+  padding: 90px 0;
+}
+
+.premium-product-section:nth-child(even) {
+  background: #fcf9f4;
+}
+
+.reverse .row {
+  flex-direction: row-reverse;
+}
+
+.premium-image {
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+.premium-image img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  transition: .6s;
+}
+
+.premium-image:hover img {
+  transform: scale(1.08);
+}
+
+.premium-content {
+  padding: 20px;
+}
+
+.premium-subtitle {
+  display: inline-block;
+  color: #b88932;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: .8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.premium-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #3d2b1f;
+}
+
+.premium-content p {
+  color: #666;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #fff;
+  transition: .35s;
+  border: 1px solid rgba(0, 0, 0, .06);
+}
+
+.menu-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+.menu-item h5 {
+  margin: 0;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+.menu-item small {
+  display: block;
+  color: #888;
+  margin-top: 5px;
+}
+
+.price-box {
+  display: flex;
+  gap: 10px;
+}
+
+.price-box span {
+  background: #5b3415;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+.extra-info {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: #fff7e7;
+  border-left: 5px solid #d7a540;
+  border-radius: 12px;
+  color: #7d5a1d;
+  font-weight: 600;
+}
+
+@media(max-width:992px) {
+
+  .premium-image img {
+    height: 420px;
+  }
+
+  .premium-content {
+    padding: 0;
+  }
+
+  .premium-content h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media(max-width:576px) {
+
+  .premium-product-section {
+    padding: 60px 0;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .price-box {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .premium-content h2 {
+    font-size: 1.8rem;
+  }
+
+}
+
+.products-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.96), rgba(231, 240, 227, 0.95));
+  border: 1px solid rgba(219, 164, 68, 0.2);
+  box-shadow: 0 10px 24px rgba(32, 73, 38, 0.08);
+}
+
+.products-cta h3 {
+  margin: 0.2rem 0 0;
+  color: var(--brand-brown);
+}
+
+.events-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.events-hero {
+  padding: 2.4rem 1.4rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.82), rgba(58, 111, 60, 0.76)),
+    url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.events-hero-copy {
+  max-width: 760px;
+}
+
+.events-hero h2 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  margin: 0.3rem 0 0.7rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.events-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.events-showcase-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.events-showcase-intro h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.7rem;
+  color: var(--brand-brown);
+}
+
+.event-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid rgba(219, 164, 68, .2);
+  box-shadow: 0 14px 32px rgba(32, 73, 38, .1);
+  transition: all .35s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px rgba(32, 73, 38, .18);
+}
+
+.event-card-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s ease;
+}
+
+.event-card:hover .event-card-image {
+  transform: scale(1.08);
+}
+
+.event-card-content {
+  padding: 1.5rem;
+  position: relative;
+  height: 100%;
+}
+
+.event-card-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-gold), transparent);
+}
+
+.event-card-subtitle {
+  margin: .4rem 0;
+  color: var(--brand-gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.event-card h3 {
+  margin-bottom: .7rem;
+  color: var(--brand-brown);
+}
+
+.event-card p {
+  color: var(--brand-muted);
+}
+
+.event-card ul {
+  padding-left: 1.1rem;
+  margin-top: 1rem;
+}
+
+.event-card li+li {
+  margin-top: .4rem;
+}
+
+.events-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.events-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.96), rgba(231, 240, 227, 0.95));
+  border: 1px solid rgba(219, 164, 68, 0.2);
+  box-shadow: 0 10px 24px rgba(32, 73, 38, 0.08);
+}
+
+.events-cta h3 {
+  margin: 0.2rem 0 0;
+  color: var(--brand-brown);
+}
+
+.stores-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.stores-hero {
+  padding: 2.4rem 1.4rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.82), rgba(76, 114, 79, 0.76)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.stores-hero-copy {
+  max-width: 760px;
+}
+
+.stores-hero h2 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  margin: 0.3rem 0 0.7rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.stores-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stores-showcase-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stores-showcase-intro h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.7rem;
+  color: var(--brand-brown);
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.store-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 32px rgba(32, 73, 38, 0.1);
+  border: 1px solid rgba(219, 164, 68, 0.2);
+}
+
+.store-card-image {
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.store-card-content {
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.store-card-highlight {
+  margin: 0 0 0.5rem;
+  color: var(--brand-gold);
+  font-weight: 700;
+}
+
+.stores-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.96), rgba(231, 240, 227, 0.95));
+  border: 1px solid rgba(219, 164, 68, 0.2);
+  box-shadow: 0 10px 24px rgba(32, 73, 38, 0.08);
+}
+
+.stores-cta h3 {
+  margin: 0.2rem 0 0;
+  color: var(--brand-brown);
+}
+
+.story-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.story-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 1rem;
+  padding: 2.2rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.88), rgba(77, 97, 79, 0.82)),
+    url('https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.story-hero-copy {
+  max-width: 700px;
+}
+
+.story-hero h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin: 0.3rem 0 0.8rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.story-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary {
+  background: var(--brand-gold);
+  color: var(--brand-brown);
+  box-shadow: 0 10px 24px rgba(219, 164, 68, 0.22);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.story-hero-card {
+  align-self: end;
+  background: rgba(255, 250, 243, 0.95);
+  color: var(--brand-brown);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.story-hero-card-label {
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--brand-gold);
+  font-weight: 700;
+}
+
+.story-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.3rem 0 0.4rem;
+}
+
+.story-intro-copy h3 {
+  margin: 0.2rem 0 0.5rem;
+  font-size: 1.7rem;
+  color: var(--brand-brown);
+}
+
+.story-stats {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.story-stat {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(32, 73, 38, 0.08);
+  box-shadow: 0 8px 20px rgba(32, 73, 38, 0.05);
+}
+
+.story-stat strong {
+  display: block;
+  color: var(--brand-brown);
+  margin-bottom: 0.2rem;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.story-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: 0 14px 30px rgba(32, 73, 38, 0.08);
+  border: 1px solid rgba(219, 164, 68, 0.18);
+}
+
+.story-card h3 {
+  margin-top: 0;
+  color: var(--brand-brown);
+}
+
+.story-feature {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+
+.story-feature-image {
+  min-height: 320px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(32, 73, 38, 0.2), rgba(219, 164, 68, 0.22)),
+    url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1200&q=80') center/cover;
+  box-shadow: 0 16px 35px rgba(32, 73, 38, 0.12);
+}
+
+.story-feature-copy h3 {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 1.8rem;
+  color: var(--brand-brown);
+}
+
+.story-quote {
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.96), rgba(231, 240, 227, 0.95));
+  border: 1px solid rgba(219, 164, 68, 0.2);
+  box-shadow: 0 10px 24px rgba(32, 73, 38, 0.06);
+}
+
+.story-quote p {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  color: var(--brand-brown);
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.story-quote span {
+  color: var(--brand-gold);
+  font-weight: 700;
+}
+
+.story-journey {
+  padding: 1.2rem 1.3rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(32, 73, 38, 0.08);
+}
+
+.story-journey h3 {
+  margin-top: 0;
+  color: var(--brand-brown);
+}
+
+.story-journey ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--brand-muted);
+}
+
+.career-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.career-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1rem;
+  padding: 2.2rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.9), rgba(89, 115, 83, 0.82)),
+    url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.career-hero-copy {
+  max-width: 700px;
+}
+
+.career-hero h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin: 0.3rem 0 0.8rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.career-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.career-hero-card {
+  align-self: end;
+  background: rgba(255, 250, 243, 0.95);
+  color: var(--brand-brown);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.career-hero-card-label {
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--brand-gold);
+  font-weight: 700;
+}
+
+.career-intro {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+}
+
+.career-intro-card,
+.career-benefits,
+.career-role-card,
+.career-cta {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 14px 30px rgba(32, 73, 38, 0.08);
+  border: 1px solid rgba(219, 164, 68, 0.18);
+}
+
+.career-intro-card h3 {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--brand-brown);
+  font-size: 1.65rem;
+}
+
+.career-benefits {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.career-benefit {
+  display: flex;
+  gap: 0.55rem;
+  color: var(--brand-muted);
+}
+
+.career-benefit strong {
+  color: var(--brand-gold);
+}
+
+.career-openings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.career-role-card h3 {
+  margin: 0.2rem 0 0.45rem;
+  color: var(--brand-brown);
+}
+
+.career-role-type {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--brand-gold);
+}
+
+.career-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.career-cta h3 {
+  margin: 0.2rem 0 0;
+  color: var(--brand-brown);
+}
+
+.contact-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.contact-hero {
+  padding: 2.2rem;
+  border-radius: 32px;
+  background: linear-gradient(120deg, rgba(32, 73, 38, 0.9), rgba(92, 118, 82, 0.84)),
+    url('https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  box-shadow: 0 20px 50px rgba(32, 73, 38, 0.16);
+}
+
+.contact-hero-copy {
+  max-width: 760px;
+}
+
+.contact-hero h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin: 0.3rem 0 0.8rem;
+  color: white;
+  font-family: "Bodoni Moda 11pt", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 14px 30px rgba(32, 73, 38, 0.08);
+  border: 1px solid rgba(219, 164, 68, 0.18);
+}
+
+.contact-details-card h3,
+.contact-form-card h3 {
+  margin-top: 0;
+  color: var(--brand-brown);
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(32, 73, 38, 0.08);
+}
+
+.contact-detail:last-child {
+  border-bottom: 0;
+}
+
+.contact-detail strong {
+  color: var(--brand-brown);
+}
+
+.contact-detail span {
+  color: var(--brand-muted);
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: var(--brand-brown);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid rgba(32, 73, 38, 0.14);
+  border-radius: 14px;
+  padding: 0.8rem 0.95rem;
+  font: inherit;
+  color: var(--brand-dark);
+  background: #fffdf9;
+}
+
+.contact-form button {
+  border: 0;
+  padding: 0.9rem 1.05rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-gold) 0%, var(--brand-brown) 100%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.25rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 243, 0.95), rgba(231, 240, 227, 0.95));
+  border: 1px solid rgba(219, 164, 68, 0.2);
+}
+
+.contact-cta h3 {
+  margin: 0.2rem 0 0;
+  color: var(--brand-brown);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .home-hero,
+  .intro-grid,
+  .flavor-grid,
+  .highlights,
+  .items-grid,
+  .quick-links,
+  .contact-grid,
+  .flavor-card-large {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    padding: 1.2rem;
+  }
+
+  .home-cta,
+  .home-contact-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .products-grid,
+  .products-highlights,
+  .events-grid,
+  .events-highlights,
+  .stores-grid,
+  .story-grid,
+  .career-openings {
+    grid-template-columns: 1fr;
+  }
+
+  .products-cta,
+  .events-cta,
+  .stores-cta,
+  .story-hero-actions,
+  .career-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .story-hero,
+  .story-intro,
+  .story-feature,
+  .career-hero,
+  .career-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .story-hero,
+  .career-hero {
+    padding: 1.4rem;
+  }
+
+  .story-feature-image {
+    min-height: 240px;
+  }
+
+  .career-cta,
+  .contact-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-hero {
+    padding: 1.4rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
