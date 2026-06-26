@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Offcanvas } from 'bootstrap';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 import HomePage from './pages/HomePage';
@@ -65,8 +66,14 @@ function AppContent() {
     const offcanvasElement = document.getElementById('mobileNavOffcanvas');
 
     if (offcanvasElement) {
-      const offcanvasInstance = window.bootstrap?.Offcanvas.getOrCreateInstance(offcanvasElement);
-      offcanvasInstance?.hide();
+      try {
+        const offcanvasInstance = Offcanvas.getOrCreateInstance(offcanvasElement);
+        offcanvasInstance.hide();
+      } catch {
+        offcanvasElement.classList.remove('show');
+        document.body.classList.remove('offcanvas-open');
+        document.body.style.overflow = '';
+      }
     }
 
     navigate(to);
